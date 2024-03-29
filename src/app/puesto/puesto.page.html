@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Puesto #1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Vehiculo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <form [formGroup]="formData">
+          <ion-item>
+            <ion-input formControlName="placa" label="Placa" label-placement="stacked"
+              placeholder="XXX-XXX"></ion-input>
+          </ion-item><ion-item>
+            <ion-input formControlName="modelo" label="Modelo" label-placement="stacked"
+              placeholder="Modelo"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="anio" label="Anio" label-placement="stacked" placeholder="Year"
+              type="number"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="fechaIngreso" label="Fecha de Ingreso" label-placement="stacked"
+              placeholder="Year" type="date"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input formControlName="horaIngreso" label="Hora de Ingreso" label-placement="stacked"
+              placeholder="Year" type="time"></ion-input>
+          </ion-item>
+        </form>
+      </ion-list>
+    </ion-card-content>
+    <ion-button style="margin: 20px;" expand="block" fill="outline" color="primary"
+      (click)="guardar()">Guardar</ion-button>
+
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+
+  <h1 class="heading">Bienvenido al SISPARKING</h1>
+
+  <div class="image">
+    <img src="../../assets/img/parkingIcon.png" class="imageIcon" />
+
+  </div>
+  <div class="ion-item">
+    <form [formGroup]="formData">
+      <ion-input type="email" errorText="Ingresa un correo electronico valido" label="Correo Electronico"
+        label-placement="floating" fill="outline" placeholder="xxxxxx@xxxx.com" formControlName="email"></ion-input>
+      <ion-input type="password" label="Password" label-placement="floating" fill="outline"
+        placeholder="*****************" errorText="Ingresa una contraseña valida"
+        formControlName="password"></ion-input>
+    </form>
+
+    <ion-button expand="block" fill="outline" color="primary" (click)="login()">Iniciar Sesion</ion-button>
+  </div>
+
+
+
+</ion-content>

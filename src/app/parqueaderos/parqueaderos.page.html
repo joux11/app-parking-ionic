@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Parqueaderos</ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+  <ion-list [inset]="true">
+    <ion-item *ngFor="let parqueadero of parqueaderos" [button]="true" detail="false"
+      (click)="irHome(parqueadero.id, parqueadero.valorHora)">
+
+      <ion-label>
+        <strong>Parqueadero: {{parqueadero.nombre}}</strong>
+        <br />
+        <ion-note color="medium">
+          Ubicacion: {{parqueadero.direccion}}
+        </ion-note>
+      </ion-label>
+      <div class="metadata-end-wrapper" slot="end">
+
+        <ion-icon color="medium" name="chevron-forward"></ion-icon>
+      </div>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="irParqueadero()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+
+</ion-content>

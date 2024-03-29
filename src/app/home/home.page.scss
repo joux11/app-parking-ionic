@@ -1,11 +1,9 @@
-#container {
-  text-align: center;
+.container {
+  margin-left: 16px;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  p {
+    font-style: italic;
+  }
 }
 
 #container strong {
@@ -24,4 +22,8 @@
 
 #container a {
   text-decoration: none;
+}
+
+.space {
+  margin-bottom: 10px;
 }

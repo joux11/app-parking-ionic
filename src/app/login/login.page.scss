@@ -1,0 +1,35 @@
+.heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.login {
+    font-size: 25px;
+    font-weight: 500;
+    color: #A6ABB1;
+    text-align: center;
+}
+
+.ion-item {
+    margin: 15px;
+    font-size: 15px;
+
+    border-radius: 20px;
+    padding: 15px;
+
+    ion-input {
+        margin-bottom: 15px;
+    }
+}
+
+
+
+.imageIcon {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+}

@@ -1,0 +1,60 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registrar Salida</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <form>
+          <ion-item>
+            <ion-input [(ngModel)]="txtPlaca" name="placa" label="Placa" label-placement="stacked" readonly></ion-input>
+          </ion-item><ion-item>
+            <ion-input [(ngModel)]="txtModelo" name="modelo" label=" Modelo" label-placement="stacked"
+              placeholder="Modelo" readonly></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input [(ngModel)]="txtFechaIngreso" name="fechaIngreso" label="Fecha de Entrada"
+              label-placement="stacked" placeholder="Year" type="date" readonly></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="txtHoraIngreso" name="horaIngreso" label="Hora de Entrada" label-placement="stacked"
+              placeholder="Year" type="time" readonly></ion-input>
+          </ion-item>
+        </form>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+
+        <ion-item>
+          <ion-input name="fechaSalida" [(ngModel)]="txtFechaSalida" label="Fecha de Salida" label-placement="stacked"
+            placeholder="Year" type="date"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input name="horaSalida" [(ngModel)]="txtHoraSalida" label="Hora de Salida" label-placement="stacked"
+            placeholder="Year" type="time"></ion-input>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+    <ion-button *ngIf="!cardPagar" style="display: flex; justify-content: center;" (click)="guardar()">Registrar
+      Salida</ion-button>
+  </ion-card>
+  <ion-card *ngIf="cardPagar">
+    <ion-card-header>
+      <ion-card-subtitle>Valores a Pagar </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Valor por hora = $ {{valorHora}}</p>
+      <div class="valor">
+
+        <p>Valor a pagar: <span>$ {{total}}</span></p>
+
+        <ion-button shape="round" color="success" (click)="pagar()">Pagar</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
